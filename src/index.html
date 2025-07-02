@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Bienvenida</title>
+</head>
+<body>
+    <h1>Formulario Bienvenida</h1>
+    <form id="welcomeForm">
+        <input type="text" id="name" placeholder="Nombre" required />
+        <input type="number" id="age" placeholder="Edad" required />
+        <button type="submit">Enviar</button>
+    </form>
+    <p id="message"></p>
+
+    <script>
+    const form = document.getElementById('welcomeForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const age = parseInt(document.getElementById('age').value);
+      if(age >= 18){
+        localStorage.setItem('username', name);
+        document.getElementById('message').innerText = `Bienvenido, ${name}!`;
+      } else {
+        document.getElementById('message').innerText = "Debes ser mayor de 18 años.";
+      }
+    });
+    </script>
+</body>
+</html>
