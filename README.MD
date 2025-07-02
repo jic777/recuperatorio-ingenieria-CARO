@@ -18,6 +18,9 @@ Formulario HTML que solicita nombre y edad, valida que sea mayor de 18 y muestra
 -- Ejecución
 
 Para correr el proyecto:
+
 docker build -t recuperatorio .
+
 docker run -d -p 8080:80 recuperatorio
+
 Luego abrir http://localhost:8080
