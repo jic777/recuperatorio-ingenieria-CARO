@@ -1,26 +1,35 @@
-- Recuperatorio Ingeniería - CARO, JUAN IGNACIO
+# Recuperatorio Ingeniería - CARO, JUAN IGNACIO
 
--- Descripción
+## Descripción
+Este proyecto es un formulario web sencillo que solicita el nombre y la edad del usuario. Valida que el nombre tenga al menos 3 caracteres y que la edad sea un número válido mayor o igual a 0. Si la edad es mayor o igual a 18, muestra un mensaje de bienvenida personalizado; si no, muestra un mensaje de error.
 
-Formulario HTML que solicita nombre y edad, valida que sea mayor de 18 y muestra un mensaje de bienvenida.
+## Requerimientos funcionales
+1. Mostrar un formulario con campos de nombre y edad.
+2. Validar que el nombre tenga al menos 3 caracteres.
+3. Validar que la edad sea un número válido y mayor o igual a 0.
+4. Mostrar mensaje de bienvenida si la edad es mayor o igual a 18.
+5. Mostrar mensaje de error si la edad es menor a 18.
 
--- Requerimientos funcionales
+## Requerimientos no funcionales
+1. El formulario debe ser responsivo y amigable para el usuario.
+2. El código debe estar documentado y bien estructurado.
+3. El proyecto debe poder ser ejecutado dentro de un contenedor Docker usando Nginx.
 
-1. Mostrar formulario con nombre y edad.
-2. Validar edad mayor o igual a 18.
-3. Mostrar mensaje de bienvenida con el nombre.
 
--- Requerimientos no funcionales
+## Cómo ejecutar
 
-1. Código comentado y ordenado.
-2. App debe ser servida en contenedor Docker.
+### Ejecutar localmente
 
--- Ejecución
+Abrir `src/index.html` con cualquier navegador web moderno.
 
-Para correr el proyecto:
+### Ejecutar con Docker
 
-docker build -t recuperatorio .
+Para construir la imagen Docker:
 
-docker run -d -p 8080:80 recuperatorio
+	docker build -t recuperatorio .
 
-Luego abrir http://localhost:8080
+Para correr el contenedor:
+
+	docker run -d -p 8080:80 recuperatorio
+
+Luego, abrir en el navegador: http://localhost:8080
